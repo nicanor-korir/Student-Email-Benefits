@@ -910,6 +910,73 @@
         .category-icon.design { background: var(--pink-bg); }
         .category-icon.productivity { background: var(--accent-bg); }
 
+        /* GitHub Pack Banner */
+        .github-pack-banner {
+            background: linear-gradient(135deg, #24292e 0%, #2d333b 100%);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid #444c56;
+        }
+
+        .pack-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pack-banner-icon {
+            font-size: 48px;
+            flex-shrink: 0;
+        }
+
+        .pack-banner-text {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .pack-banner-text h3 {
+            color: #f0f6fc;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .pack-banner-text p {
+            color: #8b949e;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .pack-banner-content .btn-primary {
+            background: #238636;
+            border-color: #238636;
+            flex-shrink: 0;
+        }
+
+        .pack-banner-content .btn-primary:hover {
+            background: #2ea043;
+            border-color: #2ea043;
+        }
+
+        /* GitHub Pack Subcategories */
+        .pack-subcategory {
+            margin-bottom: 40px;
+        }
+
+        .pack-subcategory-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .category-info h2 {
             font-size: 1.25rem;
             font-weight: 700;
@@ -944,8 +1011,8 @@
     <header>
         <div class="header-content">
             <a href="#" class="logo">
-                <div class="logo-icon">B</div>
-                <div class="logo-text">Student <span>Benefits</span></div>
+                <div class="logo-icon">📧</div>
+                <div class="logo-text">Student Email <span>→ Benefits</span></div>
             </a>
             <div class="header-actions">
                 <div class="updated-badge">📅 Updated Dec 2025</div>
@@ -976,11 +1043,15 @@
             <div class="tabs">
                 <button class="tab active" data-tab="about">
                     <span class="tab-icon">📖</span>
-                    About & Guide
+                    About
                 </button>
                 <button class="tab" data-tab="ai">
                     <span class="tab-icon">🤖</span>
                     AI Tools
+                </button>
+                <button class="tab" data-tab="github">
+                    <span class="tab-icon">🐙</span>
+                    GitHub Pack
                 </button>
                 <button class="tab" data-tab="dev">
                     <span class="tab-icon">💻</span>
@@ -1009,36 +1080,18 @@
         <div class="tab-content active" id="tab-about">
             <div class="about-container">
                 <div class="about-header">
-                    <div class="about-icon">🎓</div>
-                    <h1>School Student Benefits Portal</h1>
-                    <p>Unlock thousands of euros in free software, AI tools, and cloud credits with your student email.</p>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-value">€5,000+</div>
-                        <div class="stat-label">Total Value</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Free Tools</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">Legitimate</div>
-                    </div>
+                    <p>🎓 Unlock thousands of euros in free software, AI tools, and cloud credits with your student email.</p>
                 </div>
 
                 <div class="about-section">
-                    <h2>🎯 What Is This?</h2>
-                    <p>This portal is a curated collection of free software, AI tools, cloud credits, and discounts available to School students. Every benefit listed here can be unlocked using your School student email (@student.berlinsbi.com) or student ID.</p>
+                    <p>This portal is a curated collection of free software, AI tools, cloud credits, and discounts available to School students. Every benefit listed here can be unlocked using your School student email (@students.berlinsbi.com)</p>
                     <p>As a student pursuing your MSc in AI and Robotics, you have access to professional-grade tools that would normally cost thousands of euros per year. These aren't trials or limited versions – they're full-featured tools used by professionals worldwide.</p>
                 </div>
 
                 <div class="about-section">
                     <h2>🤔 Why Should You Use These?</h2>
                     <ul>
-                        <li data-icon="💰">Save €5,000+ annually on software you'd otherwise need to pay for</li>
+                        <!-- <li data-icon="💰">Save €5,000+ annually on software you'd otherwise need to pay for</li> -->
                         <li data-icon="🚀">Access the same professional tools used at top tech companies</li>
                         <li data-icon="📈">Build portfolio projects with enterprise-grade resources</li>
                         <li data-icon="🎓">Learn industry-standard tools before entering the job market</li>
@@ -1054,7 +1107,7 @@
                         <div class="method-card">
                             <div class="method-icon">📧</div>
                             <h4>Email Verification</h4>
-                            <p>Use your @student.berlinsbi.com email</p>
+                            <p>Use your @students.berlinsbi.com email</p>
                         </div>
                         <div class="method-card">
                             <div class="method-icon">🛡️</div>
@@ -2199,6 +2252,1115 @@
             </div>
         </div>
 
+        <!-- GitHub Pack Tab -->
+        <div class="tab-content" id="tab-github">
+            <div class="category-header">
+                <div class="category-icon dev">🎒</div>
+                <div class="category-info">
+                    <h2>GitHub Student Developer Pack</h2>
+                    <p>90+ tools worth $13,000+ • One verification unlocks everything</p>
+                </div>
+            </div>
+
+            <!-- Pack Overview Banner -->
+            <div class="github-pack-banner">
+                <div class="pack-banner-content">
+                    <div class="pack-banner-icon">🐙</div>
+                    <div class="pack-banner-text">
+                        <h3>The Ultimate Student Developer Bundle</h3>
+                        <p>Verify your student status once on GitHub Education to unlock all tools below. Most offers are automatically available after verification.</p>
+                    </div>
+                    <a href="https://education.github.com/pack" target="_blank" class="btn btn-primary">Get the Pack →</a>
+                </div>
+            </div>
+
+            <!-- Sub-category: Core GitHub Tools -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🔧 Core GitHub Tools</h3>
+                <div class="card-grid">
+                    <!-- GitHub Pro -->
+                    <div class="card" data-search="github pro unlimited repositories private actions pages codespaces">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🐙</div>
+                                <span class="card-badge badge-free">FREE PRO</span>
+                            </div>
+                            <h3 class="card-title">GitHub Pro</h3>
+                            <p class="card-description">Unlimited private repos, advanced code review, protected branches, 3,000 CI/CD minutes, and GitHub Pages.</p>
+                            <div class="card-tags">
+                                <span class="tag">Unlimited Repos</span>
+                                <span class="tag">CI/CD</span>
+                                <span class="tag">Pages</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$4/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://education.github.com/pack" target="_blank" class="btn btn-primary">Activate →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('github-pro')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Copilot -->
+                    <div class="card" data-search="github copilot ai code assistant autocomplete pair programmer">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo ai">🤖</div>
+                                <span class="card-badge badge-free">FREE</span>
+                            </div>
+                            <h3 class="card-title">GitHub Copilot Pro</h3>
+                            <p class="card-description">AI pair programmer with autocomplete suggestions. Works in VS Code, JetBrains, Neovim. Unlimited completions and chat.</p>
+                            <div class="card-tags">
+                                <span class="tag">AI Assistant</span>
+                                <span class="tag">All IDEs</span>
+                                <span class="tag">Unlimited</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$19/month value</strong> • Free for students
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/features/copilot" target="_blank" class="btn btn-primary">Activate →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('copilot')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Codespaces -->
+                    <div class="card" data-search="github codespaces cloud development environment vscode browser">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">☁️</div>
+                                <span class="card-badge badge-free">90 HRS/MO</span>
+                            </div>
+                            <h3 class="card-title">GitHub Codespaces</h3>
+                            <p class="card-description">Cloud development environments. Code from any device with a browser. Pre-configured containers for instant setup.</p>
+                            <div class="card-tags">
+                                <span class="tag">Cloud IDE</span>
+                                <span class="tag">Any Device</span>
+                                <span class="tag">Instant Setup</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>90 core hours/month</strong> • Pro included
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/codespaces" target="_blank" class="btn btn-primary">Launch →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('codespaces')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: IDEs & Editors -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">💻 IDEs & Development Tools</h3>
+                <div class="card-grid">
+                    <!-- JetBrains -->
+                    <div class="card" data-search="jetbrains intellij pycharm webstorm rider datagrip goland phpstorm">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🧠</div>
+                                <span class="card-badge badge-free">ALL IDEs</span>
+                            </div>
+                            <h3 class="card-title">JetBrains All Products</h3>
+                            <p class="card-description">Complete suite: IntelliJ IDEA, PyCharm, WebStorm, DataGrip, GoLand, Rider, and more. Professional editions free.</p>
+                            <div class="card-tags">
+                                <span class="tag">PyCharm</span>
+                                <span class="tag">IntelliJ</span>
+                                <span class="tag">DataGrip</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$649/year value</strong> • Free annually renewable
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.jetbrains.com/community/education/" target="_blank" class="btn btn-primary">Get License →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('jetbrains')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Studio Code -->
+                    <div class="card" data-search="visual studio code vscode microsoft editor extensions">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📝</div>
+                                <span class="card-badge badge-free">FREE</span>
+                            </div>
+                            <h3 class="card-title">VS Code + Coding Packs</h3>
+                            <p class="card-description">Microsoft's free editor plus curated coding packs for Java, Python, and .NET with extensions and runtimes pre-configured.</p>
+                            <div class="card-tags">
+                                <span class="tag">Python Pack</span>
+                                <span class="tag">Java Pack</span>
+                                <span class="tag">.NET Pack</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>Free for everyone</strong> • Enhanced for students
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://code.visualstudio.com/learn/educators/installers" target="_blank" class="btn btn-primary">Get Packs →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('vscode-packs')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Termius -->
+                    <div class="card" data-search="termius ssh sftp terminal client mobile desktop">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🔐</div>
+                                <span class="card-badge badge-free">PREMIUM</span>
+                            </div>
+                            <h3 class="card-title">Termius Premium</h3>
+                            <p class="card-description">SSH client for all platforms. Sync servers, SFTP, port forwarding, and team features. Mobile and desktop apps.</p>
+                            <div class="card-tags">
+                                <span class="tag">SSH/SFTP</span>
+                                <span class="tag">Cross-Platform</span>
+                                <span class="tag">Sync</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$10/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://termius.com/education" target="_blank" class="btn btn-primary">Get Premium →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('termius')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GitKraken -->
+                    <div class="card" data-search="gitkraken git client gui visualization branches merge">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🦑</div>
+                                <span class="card-badge badge-free">6 MO FREE</span>
+                            </div>
+                            <h3 class="card-title">GitKraken Pro</h3>
+                            <p class="card-description">Visual Git client with intuitive UI. Merge conflict editor, GitFlow support, and integrations with GitHub, GitLab, Bitbucket.</p>
+                            <div class="card-tags">
+                                <span class="tag">Visual Git</span>
+                                <span class="tag">Merge Editor</span>
+                                <span class="tag">GitFlow</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>6 months free</strong> then 80% off
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.gitkraken.com/github-student-developer-pack" target="_blank" class="btn btn-primary">Get Pro →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('gitkraken')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tower -->
+                    <div class="card" data-search="tower git client mac windows professional">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🗼</div>
+                                <span class="card-badge badge-free">FREE</span>
+                            </div>
+                            <h3 class="card-title">Tower Git Client</h3>
+                            <p class="card-description">Professional Git client for Mac and Windows. Powerful features like interactive rebase, submodules, and file history.</p>
+                            <div class="card-tags">
+                                <span class="tag">Mac/Windows</span>
+                                <span class="tag">Pro Features</span>
+                                <span class="tag">Rebase UI</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$69/year value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.git-tower.com/students" target="_blank" class="btn btn-primary">Get License →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('tower')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PopSQL -->
+                    <div class="card" data-search="popsql sql editor collaborative database query postgres mysql">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🗃️</div>
+                                <span class="card-badge badge-free">PREMIUM</span>
+                            </div>
+                            <h3 class="card-title">PopSQL Premium</h3>
+                            <p class="card-description">Modern collaborative SQL editor. Share queries, visualize results, connect to any database. Perfect for data projects.</p>
+                            <div class="card-tags">
+                                <span class="tag">SQL Editor</span>
+                                <span class="tag">Collaborative</span>
+                                <span class="tag">All DBs</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$12/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://popsql.com/pricing" target="_blank" class="btn btn-primary">Get Premium →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('popsql')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Cloud & Infrastructure -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">☁️ Cloud & Infrastructure</h3>
+                <div class="card-grid">
+                    <!-- Microsoft Azure -->
+                    <div class="card" data-search="microsoft azure cloud credits compute storage ml ai">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">☁️</div>
+                                <span class="card-badge badge-free">$100 CREDIT</span>
+                            </div>
+                            <h3 class="card-title">Microsoft Azure</h3>
+                            <p class="card-description">$100 Azure credit plus 25+ always-free services. Virtual machines, databases, AI services, and Azure DevOps.</p>
+                            <div class="card-tags">
+                                <span class="tag">$100 Credit</span>
+                                <span class="tag">25+ Services</span>
+                                <span class="tag">Azure ML</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$100+ value</strong> • No credit card needed
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://azure.microsoft.com/en-us/free/students/" target="_blank" class="btn btn-primary">Get Credits →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('azure')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DigitalOcean -->
+                    <div class="card" data-search="digitalocean droplets cloud hosting vps kubernetes">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">🌊</div>
+                                <span class="card-badge badge-free">$200 CREDIT</span>
+                            </div>
+                            <h3 class="card-title">DigitalOcean</h3>
+                            <p class="card-description">$200 in platform credits over 1 year. Deploy droplets, Kubernetes clusters, databases, and app platform.</p>
+                            <div class="card-tags">
+                                <span class="tag">$200 Credit</span>
+                                <span class="tag">Droplets</span>
+                                <span class="tag">K8s</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$200 over 12 months</strong>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.digitalocean.com/github-students" target="_blank" class="btn btn-primary">Get Credits →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('digitalocean')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heroku -->
+                    <div class="card" data-search="heroku paas platform deploy apps dynos postgres redis">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">🟣</div>
+                                <span class="card-badge badge-free">$312 VALUE</span>
+                            </div>
+                            <h3 class="card-title">Heroku</h3>
+                            <p class="card-description">$13/month credit for 24 months. Deploy web apps instantly with dyno containers, Postgres, and Redis add-ons.</p>
+                            <div class="card-tags">
+                                <span class="tag">$13/mo × 24</span>
+                                <span class="tag">Easy Deploy</span>
+                                <span class="tag">Add-ons</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$312 total value</strong> over 2 years
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.heroku.com/github-students" target="_blank" class="btn btn-primary">Get Credits →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('heroku')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="card" data-search="mongodb atlas nosql database document cloud compass">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">🍃</div>
+                                <span class="card-badge badge-free">$50 CREDIT</span>
+                            </div>
+                            <h3 class="card-title">MongoDB Atlas</h3>
+                            <p class="card-description">$50 Atlas credits plus MongoDB Compass and free certification exam. Modern document database for any application.</p>
+                            <div class="card-tags">
+                                <span class="tag">$50 Credit</span>
+                                <span class="tag">Compass</span>
+                                <span class="tag">Certification</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$200+ value</strong> including certification
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.mongodb.com/students" target="_blank" class="btn btn-primary">Get Credits →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('mongodb')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appwrite -->
+                    <div class="card" data-search="appwrite backend baas database authentication storage functions">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">🔥</div>
+                                <span class="card-badge badge-free">PRO PLAN</span>
+                            </div>
+                            <h3 class="card-title">Appwrite Pro</h3>
+                            <p class="card-description">Open-source Backend-as-a-Service. Auth, databases, storage, functions, and messaging. Self-host or use cloud.</p>
+                            <div class="card-tags">
+                                <span class="tag">BaaS</span>
+                                <span class="tag">Open Source</span>
+                                <span class="tag">Full Stack</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$15/month value</strong> • Free Pro plan
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://appwrite.io/education" target="_blank" class="btn btn-primary">Get Pro →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('appwrite')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LocalStack -->
+                    <div class="card" data-search="localstack aws emulator local development lambda s3 dynamodb">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo cloud">🧪</div>
+                                <span class="card-badge badge-free">PRO LICENSE</span>
+                            </div>
+                            <h3 class="card-title">LocalStack Pro</h3>
+                            <p class="card-description">AWS cloud emulator for local development. Test Lambda, S3, DynamoDB, and 70+ services without AWS costs.</p>
+                            <div class="card-tags">
+                                <span class="tag">AWS Emulator</span>
+                                <span class="tag">70+ Services</span>
+                                <span class="tag">Local Dev</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$35/month value</strong> • Free license
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://localstack.cloud/students/" target="_blank" class="btn btn-primary">Get License →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('localstack')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Learning Platforms -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">📚 Learning Platforms</h3>
+                <div class="card-grid">
+                    <!-- Frontend Masters -->
+                    <div class="card" data-search="frontend masters javascript react node web development courses">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">🎓</div>
+                                <span class="card-badge badge-free">6 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">Frontend Masters</h3>
+                            <p class="card-description">6 months free access to expert-led courses on JavaScript, React, Vue, Node.js, and frontend engineering.</p>
+                            <div class="card-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$234 value</strong> • 6 months free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://frontendmasters.com/welcome/github-student-developers/" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('frontendmasters')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DataCamp -->
+                    <div class="card" data-search="datacamp data science python r sql machine learning courses">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">📊</div>
+                                <span class="card-badge badge-free">3 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">DataCamp</h3>
+                            <p class="card-description">3 months free access to 350+ data science courses. Python, R, SQL, machine learning, and data visualization.</p>
+                            <div class="card-tags">
+                                <span class="tag">Data Science</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$75 value</strong> • 3 months free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.datacamp.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('datacamp')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Educative -->
+                    <div class="card" data-search="educative interactive coding courses system design interview">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">🎯</div>
+                                <span class="card-badge badge-free">6 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">Educative</h3>
+                            <p class="card-description">6 months free access to 70+ interactive courses. System design, coding interviews, and hands-on playgrounds.</p>
+                            <div class="card-tags">
+                                <span class="tag">System Design</span>
+                                <span class="tag">Interviews</span>
+                                <span class="tag">Interactive</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$100+ value</strong> • 6 months free + 30% off
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.educative.io/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('educative')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scrimba -->
+                    <div class="card" data-search="scrimba frontend javascript react interactive coding videos">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">🎬</div>
+                                <span class="card-badge badge-free">1 MONTH</span>
+                            </div>
+                            <h3 class="card-title">Scrimba Pro</h3>
+                            <p class="card-description">1 month free interactive video courses. Pause and edit code directly in the screencast. React, JavaScript, and more.</p>
+                            <div class="card-tags">
+                                <span class="tag">Interactive</span>
+                                <span class="tag">Frontend</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$25 value</strong> • 1 month free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://scrimba.com/github-education" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('scrimba')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GoRails -->
+                    <div class="card" data-search="gorails ruby rails tutorials screencasts web development">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">💎</div>
+                                <span class="card-badge badge-free">12 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">GoRails</h3>
+                            <p class="card-description">12 months free access to Ruby on Rails tutorials, screencasts, and courses. Build real-world web applications.</p>
+                            <div class="card-tags">
+                                <span class="tag">Ruby</span>
+                                <span class="tag">Rails</span>
+                                <span class="tag">Full Stack</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$180 value</strong> • 12 months free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://gorails.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('gorails')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interview Cake -->
+                    <div class="card" data-search="interview cake coding interview algorithms data structures prep">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">🎂</div>
+                                <span class="card-badge badge-free">1 WEEK</span>
+                            </div>
+                            <h3 class="card-title">Interview Cake</h3>
+                            <p class="card-description">1 week full access to coding interview prep. Practice problems with detailed explanations and patterns.</p>
+                            <div class="card-tags">
+                                <span class="tag">Interviews</span>
+                                <span class="tag">Algorithms</span>
+                                <span class="tag">Patterns</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$25 value</strong> • 1 week free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.interviewcake.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('interviewcake')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Domains & Hosting -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🌐 Domains & Hosting</h3>
+                <div class="card-grid">
+                    <!-- Namecheap -->
+                    <div class="card" data-search="namecheap domain registration .me ssl certificate hosting">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🌐</div>
+                                <span class="card-badge badge-free">FREE DOMAIN</span>
+                            </div>
+                            <h3 class="card-title">Namecheap</h3>
+                            <p class="card-description">Free .me domain for 1 year plus free SSL certificate. Perfect for your portfolio site: yourname.me</p>
+                            <div class="card-tags">
+                                <span class="tag">.me Domain</span>
+                                <span class="tag">Free SSL</span>
+                                <span class="tag">1 Year</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$20+ value</strong> • Domain + SSL free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://nc.me/" target="_blank" class="btn btn-primary">Get Domain →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('namecheap')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Name.com -->
+                    <div class="card" data-search="name.com domain registration hosting free portfolio">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📍</div>
+                                <span class="card-badge badge-free">FREE DOMAIN</span>
+                            </div>
+                            <h3 class="card-title">Name.com</h3>
+                            <p class="card-description">Free domain from 25+ extensions including .live, .tech, .rocks. Build your portfolio on a custom domain.</p>
+                            <div class="card-tags">
+                                <span class="tag">25+ TLDs</span>
+                                <span class="tag">Portfolio</span>
+                                <span class="tag">1 Year</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$15+ value</strong> • Free domain
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.name.com/partner/github-students" target="_blank" class="btn btn-primary">Get Domain →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('namecom')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- .TECH Domain -->
+                    <div class="card" data-search="tech domain tld developer portfolio professional">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🔧</div>
+                                <span class="card-badge badge-free">FREE .TECH</span>
+                            </div>
+                            <h3 class="card-title">.TECH Domain</h3>
+                            <p class="card-description">Free .TECH domain for 1 year. The domain extension for developers: yourname.tech or yourproject.tech</p>
+                            <div class="card-tags">
+                                <span class="tag">.tech TLD</span>
+                                <span class="tag">Professional</span>
+                                <span class="tag">1 Year</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$50 value</strong> • Free for students
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://get.tech/github-student-developer-pack" target="_blank" class="btn btn-primary">Get Domain →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('tech-domain')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Security & Monitoring -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🔒 Security & DevOps</h3>
+                <div class="card-grid">
+                    <!-- 1Password -->
+                    <div class="card" data-search="1password password manager security developer secrets ssh">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🔑</div>
+                                <span class="card-badge badge-free">1 YEAR</span>
+                            </div>
+                            <h3 class="card-title">1Password</h3>
+                            <p class="card-description">Free for 1 year including Developer Tools. SSH key management, secret references, and CLI integration.</p>
+                            <div class="card-tags">
+                                <span class="tag">Passwords</span>
+                                <span class="tag">SSH Keys</span>
+                                <span class="tag">Secrets</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$36/year value</strong> • Free for 1 year
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://1password.com/students" target="_blank" class="btn btn-primary">Get Free Year →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('1password')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doppler -->
+                    <div class="card" data-search="doppler secrets management environment variables devops">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🔐</div>
+                                <span class="card-badge badge-free">TEAM PLAN</span>
+                            </div>
+                            <h3 class="card-title">Doppler</h3>
+                            <p class="card-description">Secrets management platform. Sync environment variables across services, no more .env files scattered everywhere.</p>
+                            <div class="card-tags">
+                                <span class="tag">Secrets</span>
+                                <span class="tag">Env Vars</span>
+                                <span class="tag">DevOps</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$18/month value</strong> • Free Team plan
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.doppler.com/students" target="_blank" class="btn btn-primary">Get Team Plan →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('doppler')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sentry -->
+                    <div class="card" data-search="sentry error tracking monitoring debugging crash reporting">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🐛</div>
+                                <span class="card-badge badge-free">500K EVENTS</span>
+                            </div>
+                            <h3 class="card-title">Sentry</h3>
+                            <p class="card-description">Error tracking and performance monitoring. 500K errors, 100K transactions, 1GB attachments free for 1 year.</p>
+                            <div class="card-tags">
+                                <span class="tag">Error Tracking</span>
+                                <span class="tag">Performance</span>
+                                <span class="tag">Replays</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$26/month value</strong> • Free for 1 year
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://sentry.io/for/education/" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('sentry')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Relic -->
+                    <div class="card" data-search="new relic observability apm monitoring traces logs metrics">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📈</div>
+                                <span class="card-badge badge-free">$300/MO VALUE</span>
+                            </div>
+                            <h3 class="card-title">New Relic</h3>
+                            <p class="card-description">Full-stack observability platform. APM, infrastructure monitoring, logs, and distributed tracing. Worth $300/month.</p>
+                            <div class="card-tags">
+                                <span class="tag">APM</span>
+                                <span class="tag">Logs</span>
+                                <span class="tag">Traces</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$300/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://newrelic.com/social-impact/students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('newrelic')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Datadog -->
+                    <div class="card" data-search="datadog monitoring infrastructure cloud logs metrics traces">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🐕</div>
+                                <span class="card-badge badge-free">2 YEARS</span>
+                            </div>
+                            <h3 class="card-title">Datadog Pro</h3>
+                            <p class="card-description">Pro account with 10 servers free for 2 years. Infrastructure monitoring, APM, and log management.</p>
+                            <div class="card-tags">
+                                <span class="tag">10 Servers</span>
+                                <span class="tag">2 Years</span>
+                                <span class="tag">Pro Plan</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$1800+ value</strong> over 2 years
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.datadoghq.com/students/" target="_blank" class="btn btn-primary">Get Pro →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('datadog')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Travis CI -->
+                    <div class="card" data-search="travis ci continuous integration testing deployment automation">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🔄</div>
+                                <span class="card-badge badge-free">FREE BUILDS</span>
+                            </div>
+                            <h3 class="card-title">Travis CI</h3>
+                            <p class="card-description">Private builds free for students. Continuous integration for your GitHub repositories. Auto-test on every push.</p>
+                            <div class="card-tags">
+                                <span class="tag">CI/CD</span>
+                                <span class="tag">Private Repos</span>
+                                <span class="tag">Auto-Test</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$69/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.travis-ci.com/pricing/" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('travis')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Design & Productivity -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🎨 Design & Productivity</h3>
+                <div class="card-grid">
+                    <!-- Icons8 -->
+                    <div class="card" data-search="icons8 icons photos illustrations design assets music">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo design">🎨</div>
+                                <span class="card-badge badge-free">3 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">Icons8</h3>
+                            <p class="card-description">3 months free subscription: icons, photos, illustrations, and music. Design assets for any project.</p>
+                            <div class="card-tags">
+                                <span class="tag">Icons</span>
+                                <span class="tag">Photos</span>
+                                <span class="tag">Music</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$60 value</strong> • 3 months free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://icons8.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('icons8')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap Studio -->
+                    <div class="card" data-search="bootstrap studio website builder responsive design visual editor">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo design">🅱️</div>
+                                <span class="card-badge badge-free">FREE</span>
+                            </div>
+                            <h3 class="card-title">Bootstrap Studio</h3>
+                            <p class="card-description">Desktop app for responsive website building. Drag-and-drop Bootstrap components. Export clean HTML/CSS.</p>
+                            <div class="card-tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">Visual Editor</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$60 value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://bootstrapstudio.io/students/" target="_blank" class="btn btn-primary">Get License →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('bootstrapstudio')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notion -->
+                    <div class="card" data-search="notion workspace notes docs wiki database productivity ai">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">📓</div>
+                                <span class="card-badge badge-free">EDUCATION+</span>
+                            </div>
+                            <h3 class="card-title">Notion Education</h3>
+                            <p class="card-description">Full Education plan plus additional AI responses. Notes, docs, wikis, databases all in one collaborative workspace.</p>
+                            <div class="card-tags">
+                                <span class="tag">Workspace</span>
+                                <span class="tag">Notion AI</span>
+                                <span class="tag">Templates</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$10/month value</strong> • Free Education plan
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.notion.so/product/notion-for-education" target="_blank" class="btn btn-primary">Get Plan →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('notion')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PomoDone -->
+                    <div class="card" data-search="pomodone pomodoro timer productivity time tracking focus">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo productivity">🍅</div>
+                                <span class="card-badge badge-free">2 YEARS</span>
+                            </div>
+                            <h3 class="card-title">PomoDone</h3>
+                            <p class="card-description">Pomodoro timer with integrations. Track time across Trello, Asana, Todoist, and more. Focus technique app.</p>
+                            <div class="card-tags">
+                                <span class="tag">Pomodoro</span>
+                                <span class="tag">Integrations</span>
+                                <span class="tag">Focus</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$50 value</strong> • Lite plan 2 years
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://pomodoneapp.com/education.html" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('pomodone')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visme -->
+                    <div class="card" data-search="visme presentations infographics videos design content creation">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo design">🖼️</div>
+                                <span class="card-badge badge-free">3 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">Visme Starter</h3>
+                            <p class="card-description">3 months free for presentations, infographics, and videos. Visual content creation with templates and animations.</p>
+                            <div class="card-tags">
+                                <span class="tag">Presentations</span>
+                                <span class="tag">Infographics</span>
+                                <span class="tag">Videos</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$45 value</strong> • 3 months free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.visme.co/github-students/" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('visme')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: Hardware & IoT -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🔌 Hardware & IoT</h3>
+                <div class="card-grid">
+                    <!-- Arduino -->
+                    <div class="card" data-search="arduino iot hardware microcontroller electronics cloud">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🤖</div>
+                                <span class="card-badge badge-free">6 MONTHS</span>
+                            </div>
+                            <h3 class="card-title">Arduino Cloud</h3>
+                            <p class="card-description">6 months free Arduino Cloud plus hardware discounts. IoT dashboards, remote control, and OTA updates for your projects.</p>
+                            <div class="card-tags">
+                                <span class="tag">IoT Cloud</span>
+                                <span class="tag">Hardware Deals</span>
+                                <span class="tag">OTA Updates</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$40+ value</strong> • Cloud + discounts
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.arduino.cc/education/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('arduino')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adafruit -->
+                    <div class="card" data-search="adafruit electronics hardware iot sensors raspberry pi">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🍓</div>
+                                <span class="card-badge badge-free">IO+ FREE</span>
+                            </div>
+                            <h3 class="card-title">Adafruit IO+</h3>
+                            <p class="card-description">1 year Adafruit IO+ plus hardware discounts. IoT data platform, dashboards, triggers, and integrations.</p>
+                            <div class="card-tags">
+                                <span class="tag">IoT Platform</span>
+                                <span class="tag">Dashboards</span>
+                                <span class="tag">Discounts</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$100+ value</strong> • IO+ 1 year free
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.adafruit.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('adafruit')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-category: APIs & Testing -->
+            <div class="pack-subcategory">
+                <h3 class="pack-subcategory-title">🧪 APIs & Testing</h3>
+                <div class="card-grid">
+                    <!-- Stripe -->
+                    <div class="card" data-search="stripe payments api processing transactions billing">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">💳</div>
+                                <span class="card-badge badge-free">WAIVED FEES</span>
+                            </div>
+                            <h3 class="card-title">Stripe</h3>
+                            <p class="card-description">Waived transaction fees on first $1,000 in revenue. Payment processing API for your startup or side project.</p>
+                            <div class="card-tags">
+                                <span class="tag">Payments</span>
+                                <span class="tag">$1K Free</span>
+                                <span class="tag">API</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>~$30 value</strong> • No fees on $1K
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://stripe.com/blog/stripe-for-github-global-campus" target="_blank" class="btn btn-primary">Get Started →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('stripe')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LambdaTest -->
+                    <div class="card" data-search="lambdatest browser testing cross browser automation selenium">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🧪</div>
+                                <span class="card-badge badge-free">LIVE PLAN</span>
+                            </div>
+                            <h3 class="card-title">LambdaTest</h3>
+                            <p class="card-description">Free Live Plan for 1 year. Test on 3000+ browsers and devices. Automated and manual cross-browser testing.</p>
+                            <div class="card-tags">
+                                <span class="tag">3000+ Browsers</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Selenium</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$180/year value</strong> • Free Live plan
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.lambdatest.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('lambdatest')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BrowserStack -->
+                    <div class="card" data-search="browserstack real device testing mobile automation cloud">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📱</div>
+                                <span class="card-badge badge-free">1 YEAR</span>
+                            </div>
+                            <h3 class="card-title">BrowserStack</h3>
+                            <p class="card-description">Free Automate Mobile Plan for 1 year. Test on real iOS and Android devices in the cloud. 1 parallel session.</p>
+                            <div class="card-tags">
+                                <span class="tag">Real Devices</span>
+                                <span class="tag">Mobile</span>
+                                <span class="tag">Automate</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$39/month value</strong> • Free 1 year
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://www.browserstack.com/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('browserstack')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testmail -->
+                    <div class="card" data-search="testmail email testing automation api qa transactional">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📧</div>
+                                <span class="card-badge badge-free">ESSENTIAL</span>
+                            </div>
+                            <h3 class="card-title">Testmail</h3>
+                            <p class="card-description">Free Essential plan for email testing. Automated email testing with powerful APIs. Test transactional emails.</p>
+                            <div class="card-tags">
+                                <span class="tag">Email Testing</span>
+                                <span class="tag">API</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$10/month value</strong> • Free Essential
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://testmail.app/github-students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('testmail')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bump.sh -->
+                    <div class="card" data-search="bump api documentation openapi swagger docs generator">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">📚</div>
+                                <span class="card-badge badge-free">$149/MO VALUE</span>
+                            </div>
+                            <h3 class="card-title">Bump.sh</h3>
+                            <p class="card-description">Standard plan free ($149/month value). Generate beautiful API documentation from OpenAPI/Swagger specs automatically.</p>
+                            <div class="card-tags">
+                                <span class="tag">API Docs</span>
+                                <span class="tag">OpenAPI</span>
+                                <span class="tag">Auto-Gen</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$149/month value</strong> • Free while student
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://bump.sh/students" target="_blank" class="btn btn-primary">Get Access →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('bumpsh')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imgbot -->
+                    <div class="card" data-search="imgbot image optimization github app automated compression">
+                        <div class="card-main">
+                            <div class="card-header">
+                                <div class="card-logo dev">🖼️</div>
+                                <span class="card-badge badge-free">FREE</span>
+                            </div>
+                            <h3 class="card-title">Imgbot</h3>
+                            <p class="card-description">Free image optimization for all repos. GitHub App that automatically compresses images via pull requests.</p>
+                            <div class="card-tags">
+                                <span class="tag">Image Opt</span>
+                                <span class="tag">Auto PR</span>
+                                <span class="tag">All Repos</span>
+                            </div>
+                            <div class="card-value">
+                                💰 <strong>$10/month value</strong> • Free for students
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://imgbot.net/github-students" target="_blank" class="btn btn-primary">Install →</a>
+                                <button class="btn btn-secondary" onclick="openGuide('imgbot')">Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- No Results Message -->
         <div class="no-results" id="noResults" style="display: none;">
             <div class="no-results-icon">🔍</div>
@@ -2349,7 +3511,7 @@
                                 <div class="step-number">2</div>
                                 <div class="step-content">
                                     <h4>Verify Your Student Status</h4>
-                                    <p>Use your @student.berlinsbi.com email or upload proof of enrollment</p>
+                                    <p>Use your @students.berlinsbi.com email or upload proof of enrollment</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -2545,7 +3707,7 @@
                                 <div class="step-number">2</div>
                                 <div class="step-content">
                                     <h4>Apply with School Email</h4>
-                                    <p>Use your @student.berlinsbi.com email for fastest approval</p>
+                                    <p>Use your @students.berlinsbi.com email for fastest approval</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -2944,7 +4106,7 @@
                                 <div class="step-number">3</div>
                                 <div class="step-content">
                                     <h4>Verify with School Email</h4>
-                                    <p>Use your @student.berlinsbi.com email for verification</p>
+                                    <p>Use your @students.berlinsbi.com email for verification</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -3084,7 +4246,7 @@
                                 <div class="step-number">2</div>
                                 <div class="step-content">
                                     <h4>Sign Up with School Email</h4>
-                                    <p>Use your @student.berlinsbi.com email to register</p>
+                                    <p>Use your @students.berlinsbi.com email to register</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -3182,7 +4344,7 @@
                                 <div class="step-number">2</div>
                                 <div class="step-content">
                                     <h4>Or Verify Directly</h4>
-                                    <p>Visit office.com/student and enter your @student.berlinsbi.com email</p>
+                                    <p>Visit office.com/student and enter your @students.berlinsbi.com email</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -3434,7 +4596,7 @@
                                 <div class="step-number">3</div>
                                 <div class="step-content">
                                     <h4>Verify Student Status</h4>
-                                    <p>Enter your @student.berlinsbi.com email for verification</p>
+                                    <p>Enter your @students.berlinsbi.com email for verification</p>
                                 </div>
                             </div>
                             <div class="guide-step">
@@ -4183,6 +5345,1293 @@
                         <div class="guide-tip">
                             <span class="guide-tip-icon">💡</span>
                             <p><strong>Pro Tip:</strong> Keep both accounts active - different brands use different verification platforms!</p>
+                        </div>
+                    </div>
+                `
+            },
+            // GitHub Pack Guides
+            'github-pro': {
+                logo: '🐙',
+                title: 'GitHub Pro',
+                subtitle: 'Free while a student',
+                link: 'https://education.github.com/pack',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>GitHub Pro includes unlimited private repositories, 3,000 CI/CD minutes, advanced code review, protected branches, GitHub Pages, and Codespaces with 90 core hours/month.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Sign Up for GitHub</h4>
+                                    <p>Create a GitHub account if you don't have one</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Apply for Student Developer Pack</h4>
+                                    <p>Go to education.github.com/pack and click "Get your Pack"</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Verify Student Status</h4>
+                                    <p>Use your school email or upload enrollment documents</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> GitHub verification unlocks 90+ partner tools automatically!</p>
+                        </div>
+                    </div>
+                `
+            },
+            codespaces: {
+                logo: '☁️',
+                title: 'GitHub Codespaces',
+                subtitle: 'Cloud development environments',
+                link: 'https://github.com/codespaces',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>90 core hours/month of cloud development environments. Code from any browser, instant setup with pre-configured containers, and full VS Code experience in the cloud.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Use</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Codespaces Pro is included with your student benefits</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Open Any Repository</h4>
+                                    <p>Press '.' on any repo or change .com to .dev in the URL</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Start Coding</h4>
+                                    <p>Full VS Code in your browser with terminal access</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Add a devcontainer.json to your repo for instant project setup!</p>
+                        </div>
+                    </div>
+                `
+            },
+            'vscode-packs': {
+                logo: '📝',
+                title: 'VS Code Coding Packs',
+                subtitle: 'Pre-configured development setups',
+                link: 'https://code.visualstudio.com/learn/educators/installers',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>One-click installers that set up VS Code with all necessary extensions, runtimes, and tools for Python, Java, or .NET development.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 Available Packs</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">🐍</div>
+                                <div class="step-content">
+                                    <h4>Python Coding Pack</h4>
+                                    <p>Python, Jupyter, linting, and data science tools</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">☕</div>
+                                <div class="step-content">
+                                    <h4>Java Coding Pack</h4>
+                                    <p>JDK, Maven, debugger, and Java extensions</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">🔷</div>
+                                <div class="step-content">
+                                    <h4>.NET Coding Pack</h4>
+                                    <p>.NET SDK, C# extensions, and debugging tools</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            tower: {
+                logo: '🗼',
+                title: 'Tower Git Client',
+                subtitle: 'Professional Git for Mac & Windows',
+                link: 'https://www.git-tower.com/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free Tower Pro license while a student. Professional Git client with visual branch management, interactive rebase, pull request integration, and more.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Visit Tower Students</h4>
+                                    <p>Go to git-tower.com/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Verify via GitHub Education</h4>
+                                    <p>Connect your verified GitHub student account</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Download & Activate</h4>
+                                    <p>Download for Mac or Windows and enter your license</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            digitalocean: {
+                logo: '🌊',
+                title: 'DigitalOcean',
+                subtitle: '$200 cloud credits',
+                link: 'https://www.digitalocean.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>$200 in platform credits over 12 months. Deploy droplets (VMs), Kubernetes clusters, managed databases, and app platform.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Verify your student status on GitHub first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit DigitalOcean Student Page</h4>
+                                    <p>Go to digitalocean.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub Account</h4>
+                                    <p>Authorize DigitalOcean to verify your student status</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> $5/month droplet = 40 months of free hosting!</p>
+                        </div>
+                    </div>
+                `
+            },
+            heroku: {
+                logo: '🟣',
+                title: 'Heroku',
+                subtitle: '$312 platform credits',
+                link: 'https://www.heroku.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>$13/month credit for 24 months ($312 total). Easy app deployment with dynos, Postgres, Redis, and add-on ecosystem.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Verify your student status on GitHub</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Create Heroku Account</h4>
+                                    <p>Sign up at heroku.com</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Link via GitHub Pack</h4>
+                                    <p>Access Heroku through the GitHub Education portal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            mongodb: {
+                logo: '🍃',
+                title: 'MongoDB Atlas',
+                subtitle: '$50 credits + certification',
+                link: 'https://www.mongodb.com/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>$50 MongoDB Atlas credits, MongoDB Compass (GUI), and a free certification exam. Perfect for learning NoSQL databases.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Your gateway to MongoDB student benefits</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Create MongoDB Account</h4>
+                                    <p>Sign up at mongodb.com/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Claim Benefits</h4>
+                                    <p>Credits and certification voucher will be applied</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Get MongoDB certified - it looks great on your resume!</p>
+                        </div>
+                    </div>
+                `
+            },
+            appwrite: {
+                logo: '🔥',
+                title: 'Appwrite',
+                subtitle: 'Open-source BaaS',
+                link: 'https://appwrite.io/education',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free Pro plan ($15/month value). Complete backend: auth, databases, storage, functions, and real-time. Self-host or use cloud.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Verify your student status first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Appwrite Education</h4>
+                                    <p>Go to appwrite.io/education</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub</h4>
+                                    <p>Verify through your GitHub student account</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            localstack: {
+                logo: '🧪',
+                title: 'LocalStack',
+                subtitle: 'AWS cloud emulator',
+                link: 'https://localstack.cloud/students/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free Pro license. Emulate 70+ AWS services locally: Lambda, S3, DynamoDB, SQS, and more. Test without AWS costs.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for LocalStack Pro access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Sign Up at LocalStack</h4>
+                                    <p>Create account at localstack.cloud/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Install LocalStack</h4>
+                                    <p>pip install localstack or use Docker</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Perfect for learning AWS without any cloud costs!</p>
+                        </div>
+                    </div>
+                `
+            },
+            frontendmasters: {
+                logo: '🎓',
+                title: 'Frontend Masters',
+                subtitle: '6 months free access',
+                link: 'https://frontendmasters.com/welcome/github-student-developers/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>6 months free access to all courses. Expert-led courses on JavaScript, React, Vue, Node.js, TypeScript, and more.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete GitHub Education verification</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Frontend Masters</h4>
+                                    <p>Go to their GitHub Student welcome page</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub</h4>
+                                    <p>Authorize to verify student status</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Start with "Complete Intro to Web Development" if you're new!</p>
+                        </div>
+                    </div>
+                `
+            },
+            scrimba: {
+                logo: '🎬',
+                title: 'Scrimba',
+                subtitle: 'Interactive coding courses',
+                link: 'https://scrimba.com/github-education',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>1 month free Scrimba Pro. Interactive screencasts where you can pause and edit the code directly in the video!</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete GitHub Education verification</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Scrimba</h4>
+                                    <p>Go to scrimba.com/github-education</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Redeem Your Month</h4>
+                                    <p>Connect GitHub account to activate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            gorails: {
+                logo: '💎',
+                title: 'GoRails',
+                subtitle: '12 months free Ruby on Rails',
+                link: 'https://gorails.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>12 months free access to all GoRails tutorials, screencasts, and courses on Ruby, Rails, and full-stack web development.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete verification first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit GoRails</h4>
+                                    <p>Go to gorails.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Learn</h4>
+                                    <p>Authorize GitHub and start learning Rails</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            interviewcake: {
+                logo: '🎂',
+                title: 'Interview Cake',
+                subtitle: '1 week free interview prep',
+                link: 'https://www.interviewcake.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>1 week full access to coding interview preparation. Practice problems with detailed explanations and pattern recognition.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Verify student status first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Interview Cake</h4>
+                                    <p>Go to interviewcake.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Start Practicing</h4>
+                                    <p>Use your week wisely before job hunting!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            namecom: {
+                logo: '📍',
+                title: 'Name.com',
+                subtitle: 'Free domain from 25+ TLDs',
+                link: 'https://www.name.com/partner/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free domain name from 25+ extensions including .live, .tech, .rocks, and more. Perfect for your portfolio or project.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete verification first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Name.com Partner Page</h4>
+                                    <p>Access through GitHub Education</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Choose Your Domain</h4>
+                                    <p>Select from available free extensions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'tech-domain': {
+                logo: '🔧',
+                title: '.TECH Domain',
+                subtitle: 'Free .tech domain for 1 year',
+                link: 'https://get.tech/github-student-developer-pack',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free .TECH domain for 1 year. The domain extension made for developers: yourname.tech or yourproject.tech</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for free .tech domain</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit get.tech</h4>
+                                    <p>Go to their GitHub Student page</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Search & Register</h4>
+                                    <p>Find available domain and claim it free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '1password': {
+                logo: '🔑',
+                title: '1Password',
+                subtitle: 'Free for 1 year',
+                link: 'https://1password.com/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>1 year free including Developer Tools: SSH key management, secret references in code, CLI integration, and more.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete GitHub Education verification</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit 1Password Students</h4>
+                                    <p>Go to 1password.com/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub</h4>
+                                    <p>Verify through your GitHub student account</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Use Developer Tools to manage SSH keys and never type passwords in terminal again!</p>
+                        </div>
+                    </div>
+                `
+            },
+            doppler: {
+                logo: '🔐',
+                title: 'Doppler',
+                subtitle: 'Secrets management platform',
+                link: 'https://www.doppler.com/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free Team plan. Sync environment variables across all services. No more scattered .env files or exposed secrets.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete verification first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Sign Up at Doppler</h4>
+                                    <p>Create account at doppler.com/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub</h4>
+                                    <p>Verify student status through GitHub</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            sentry: {
+                logo: '🐛',
+                title: 'Sentry',
+                subtitle: 'Error tracking & performance',
+                link: 'https://sentry.io/for/education/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>500K errors, 100K transactions, 1GB attachments, 500 session replays free for 1 year. Works with any language/framework.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Sentry education access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Sign Up at Sentry</h4>
+                                    <p>Create account and select education</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Install SDK</h4>
+                                    <p>Add Sentry SDK to your project</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-tip">
+                            <span class="guide-tip-icon">💡</span>
+                            <p><strong>Pro Tip:</strong> Session Replay shows exactly what users did before errors - invaluable for debugging!</p>
+                        </div>
+                    </div>
+                `
+            },
+            newrelic: {
+                logo: '📈',
+                title: 'New Relic',
+                subtitle: 'Full-stack observability',
+                link: 'https://newrelic.com/social-impact/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free New Relic account worth $300/month. APM, infrastructure monitoring, logs, distributed tracing, and dashboards.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete GitHub Education verification</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit New Relic Students</h4>
+                                    <p>Go to their social impact page</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Monitor</h4>
+                                    <p>Verify through GitHub and instrument your apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            datadog: {
+                logo: '🐕',
+                title: 'Datadog',
+                subtitle: 'Pro account for 2 years',
+                link: 'https://www.datadoghq.com/students/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Pro account with 10 servers free for 2 years. Infrastructure monitoring, APM, logs, and real-time dashboards.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Datadog student access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Sign Up at Datadog</h4>
+                                    <p>Create account at datadoghq.com/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Verify & Install Agent</h4>
+                                    <p>Connect GitHub and install Datadog agent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            travis: {
+                logo: '🔄',
+                title: 'Travis CI',
+                subtitle: 'Free private builds',
+                link: 'https://www.travis-ci.com/pricing/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Private builds free while a student. Continuous integration for your GitHub repositories - test on every push automatically.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete GitHub Education verification</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Sign Up at Travis CI</h4>
+                                    <p>Create account with GitHub</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Add .travis.yml</h4>
+                                    <p>Configure CI for your repositories</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            icons8: {
+                logo: '🎨',
+                title: 'Icons8',
+                subtitle: '3 months design assets',
+                link: 'https://icons8.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>3 months free subscription: icons, photos, illustrations, and music tracks for any project.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Icons8 access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Icons8</h4>
+                                    <p>Go to icons8.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect GitHub</h4>
+                                    <p>Verify and start downloading assets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            bootstrapstudio: {
+                logo: '🅱️',
+                title: 'Bootstrap Studio',
+                subtitle: 'Visual website builder',
+                link: 'https://bootstrapstudio.io/students/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free license while a student. Visual drag-and-drop Bootstrap website builder that exports clean HTML/CSS.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete verification first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Bootstrap Studio</h4>
+                                    <p>Go to bootstrapstudio.io/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Download & Activate</h4>
+                                    <p>Verify through GitHub and install</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            pomodone: {
+                logo: '🍅',
+                title: 'PomoDone',
+                subtitle: 'Pomodoro timer for 2 years',
+                link: 'https://pomodoneapp.com/education.html',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Lite plan free for 2 years. Pomodoro technique timer with Trello, Asana, Todoist, and more integrations.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for PomoDone access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit PomoDone Education</h4>
+                                    <p>Go to pomodoneapp.com/education</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Focus</h4>
+                                    <p>Link GitHub and start being productive!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            visme: {
+                logo: '🖼️',
+                title: 'Visme',
+                subtitle: '3 months content creation',
+                link: 'https://www.visme.co/github-students/',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>3 months free Starter plan. Create presentations, infographics, and videos with templates and animations.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Complete verification first</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Visme</h4>
+                                    <p>Go to visme.co/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Create</h4>
+                                    <p>Verify through GitHub and start designing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            arduino: {
+                logo: '🤖',
+                title: 'Arduino Cloud',
+                subtitle: '6 months + hardware discounts',
+                link: 'https://www.arduino.cc/education/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>6 months Arduino Cloud free plus hardware discounts. IoT dashboards, remote control, and OTA updates for your projects.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Arduino benefits</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Arduino Education</h4>
+                                    <p>Go to arduino.cc/education/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Build</h4>
+                                    <p>Verify through GitHub and start IoT projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            adafruit: {
+                logo: '🍓',
+                title: 'Adafruit IO+',
+                subtitle: '1 year + hardware discounts',
+                link: 'https://www.adafruit.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>1 year Adafruit IO+ free plus hardware discounts. IoT data platform, dashboards, triggers, and IFTTT integrations.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Adafruit benefits</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Adafruit</h4>
+                                    <p>Go to adafruit.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Explore</h4>
+                                    <p>Verify and check hardware discounts too!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            stripe: {
+                logo: '💳',
+                title: 'Stripe',
+                subtitle: 'Waived fees on $1K revenue',
+                link: 'https://stripe.com/blog/stripe-for-github-global-campus',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Waived transaction fees on your first $1,000 in revenue. Payment API for your startup or side project.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Stripe student benefits</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Create Stripe Account</h4>
+                                    <p>Sign up at stripe.com</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Link via GitHub Pack</h4>
+                                    <p>Access benefit through GitHub Education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            lambdatest: {
+                logo: '🧪',
+                title: 'LambdaTest',
+                subtitle: 'Cross-browser testing',
+                link: 'https://www.lambdatest.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Live Plan free for 1 year. Test on 3000+ browsers and devices with automated and manual testing.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for LambdaTest access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit LambdaTest</h4>
+                                    <p>Go to lambdatest.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Test</h4>
+                                    <p>Verify and start testing your apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            browserstack: {
+                logo: '📱',
+                title: 'BrowserStack',
+                subtitle: 'Real device testing',
+                link: 'https://www.browserstack.com/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Automate Mobile Plan free for 1 year. Test on real iOS and Android devices in the cloud.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for BrowserStack access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit BrowserStack</h4>
+                                    <p>Go to browserstack.com/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Test</h4>
+                                    <p>Verify through GitHub and start mobile testing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            testmail: {
+                logo: '📧',
+                title: 'Testmail',
+                subtitle: 'Email testing platform',
+                link: 'https://testmail.app/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free Essential plan. Automated email testing with powerful APIs for testing transactional emails.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Testmail access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Testmail</h4>
+                                    <p>Go to testmail.app/github-students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Test</h4>
+                                    <p>Verify and start testing emails</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            bumpsh: {
+                logo: '📚',
+                title: 'Bump.sh',
+                subtitle: 'API documentation generator',
+                link: 'https://bump.sh/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Standard plan free ($149/month value). Generate beautiful API documentation from OpenAPI/Swagger specs automatically.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Bump.sh access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Visit Bump.sh</h4>
+                                    <p>Go to bump.sh/students</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Connect & Document</h4>
+                                    <p>Verify through GitHub and upload your OpenAPI spec</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            imgbot: {
+                logo: '🖼️',
+                title: 'Imgbot',
+                subtitle: 'Automatic image optimization',
+                link: 'https://imgbot.net/github-students',
+                content: `
+                    <div class="guide-section">
+                        <h3>📋 What You Get</h3>
+                        <p>Free for all your public and private repos. GitHub App that automatically optimizes images via pull requests.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📝 How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Get GitHub Student Pack</h4>
+                                    <p>Required for Imgbot Pro access</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Install Imgbot</h4>
+                                    <p>Add the Imgbot GitHub App to your repos</p>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Automatic PRs</h4>
+                                    <p>Imgbot will create PRs to optimize images</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 `

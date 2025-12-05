@@ -1,6 +1,6 @@
 # Student Access Benefits Portal
 
-> A comprehensive directory of **40+ free and discounted tech resources** for students pursuing AI, Computer Science, and related fields.
+> A comprehensive directory of **90+ free and discounted tech resources** for students pursuing AI, Computer Science, and related fields — including the complete GitHub Student Developer Pack.
 
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue?logo=github)](https://github.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -17,14 +17,14 @@ Students often miss out on thousands of dollars worth of free software, cloud cr
 │                  STUDENT ACCESS BENEFITS PORTAL                │
 ├────────────────────────────────────────────────────────────────┤
 │                                                                │
-│   ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐  │
-│   │   AI    │ │Developer│ │  Cloud  │ │ Design  │ │Discounts│  │
-│   │  Tools  │ │  Tools  │ │Platforms│ │  Tools  │ │ & Deals │  │
-│   └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘  │
-│        │           │           │           │           │       │
-│        ▼           ▼           ▼           ▼           ▼       │
-│   ┌─────────────────────────────────────────────────────────┐  │
-│   │              41 Curated Resources                       │  │
+│  ┌────────┐┌────────┐┌────────┐┌────────┐┌────────┐┌────────┐ │
+│  │   AI   ││  Dev   ││ Cloud  ││ Design ││Discount││ GitHub │ │
+│  │ Tools  ││ Tools  ││Platform││ Tools  ││ & Deal ││  Pack  │ │
+│  └───┬────┘└───┬────┘└───┬────┘└───┬────┘└───┬────┘└───┬────┘ │
+│      │         │         │         │         │         │      │
+│      ▼         ▼         ▼         ▼         ▼         ▼      │
+│   ┌─────────────────────────────────────────────────────────┐ │
+│   │              90+ Curated Resources                      │ │
 │   │                                                         │  │
 │   │  • Step-by-step activation guides                       │  │
 │   │  • Verification requirements                            │  │
@@ -44,7 +44,8 @@ Students often miss out on thousands of dollars worth of free software, cloud cr
 | **Search** | Instantly filter resources by name, category, or keyword |
 | **Dark Mode** | Eye-friendly dark theme with system preference detection |
 | **Detailed Guides** | Step-by-step instructions for claiming each benefit |
-| **Categories** | 7 organized tabs for easy navigation |
+| **Categories** | 8 organized tabs for easy navigation |
+| **GitHub Pack** | Complete GitHub Student Developer Pack with 50+ tools |
 | **Responsive** | Works on desktop, tablet, and mobile |
 | **No Backend** | Pure HTML/CSS/JS - fast and privacy-friendly |
 
@@ -69,6 +70,18 @@ Notion, Microsoft 365, Tableau Student, Educative, DataCamp
 
 ### Discounts & Deals
 Apple, Samsung, Spotify + Hulu, Notebooksbilliger (Germany), UNiDAYS
+
+### GitHub Student Developer Pack
+The complete pack in one dedicated tab with organized subcategories:
+- **Core GitHub Tools**: GitHub Pro, Copilot, Codespaces
+- **IDEs & Dev Tools**: JetBrains, VS Code Packs, Tower, GitKraken, Termius, PopSQL
+- **Cloud & Infrastructure**: Azure, DigitalOcean, Heroku, MongoDB, Appwrite, LocalStack
+- **Learning Platforms**: Frontend Masters, DataCamp, Educative, Scrimba, GoRails
+- **Domains & Hosting**: Namecheap, Name.com, .TECH domains
+- **Security & DevOps**: 1Password, Doppler, Sentry, New Relic, Datadog, Travis CI
+- **Design & Productivity**: Icons8, Bootstrap Studio, Notion, PomoDone, Visme
+- **Hardware & IoT**: Arduino Cloud, Adafruit IO+
+- **APIs & Testing**: Stripe, LambdaTest, BrowserStack, Testmail, Bump.sh, Imgbot
 
 ---
 
@@ -98,7 +111,8 @@ free-ai-credits/
     │   │   ├── Cloud Platforms
     │   │   ├── Design Tools
     │   │   ├── Productivity
-    │   │   └── Discounts
+    │   │   ├── Discounts
+    │   │   └── GitHub Pack (with subcategories)
     │   ├── Guide modals
     │   └── Footer
     │
@@ -181,12 +195,14 @@ python -m http.server 8000
 
 | Category | Approximate Annual Value |
 |----------|-------------------------|
-| Cloud Credits | $1,000+ (Azure, AWS, GCP combined) |
-| Development Tools | $500+ (JetBrains, GitHub Pro) |
-| AI Tools | $300+ (Copilot, Perplexity Pro) |
-| Design Software | $1,000+ (Autodesk, Figma) |
-| Learning Platforms | $500+ (DataCamp, Educative) |
-| **Total** | **$3,000+ per year** |
+| Cloud Credits | $1,500+ (Azure, AWS, GCP, DigitalOcean, Heroku) |
+| Development Tools | $1,000+ (JetBrains, GitHub Pro, GitKraken, Tower) |
+| AI Tools | $500+ (Copilot, Perplexity Pro, Gemini) |
+| Design Software | $1,000+ (Autodesk, Figma, Bootstrap Studio) |
+| Learning Platforms | $600+ (Frontend Masters, DataCamp, Educative) |
+| DevOps & Monitoring | $4,000+ (New Relic, Datadog, Sentry) |
+| GitHub Pack Total | $13,000+ (all pack benefits combined) |
+| **Total** | **$10,000+ per year** |
 
 ---
 
