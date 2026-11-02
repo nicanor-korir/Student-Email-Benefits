@@ -1386,6 +1386,24 @@
                 </div>
             </div>
             <div class="card-grid" id="dev-grid">
+                <!-- Kilobat -->
+                <div class="card" data-search="kilobat mac network diagnostics wifi hotspot bandwidth student">
+                    <div class="card-main">
+                        <div class="card-header">
+                            <div class="card-logo dev">📶</div>
+                            <span class="card-badge badge-free">1 YEAR FREE</span>
+                        </div>
+                        <h3 class="card-title">Kilobat Pro for Students</h3>
+                        <p class="card-description">Mac network diagnostics and bandwidth controls. Eligible students can request a free year on two Macs.</p>
+                        <div class="card-tags"><span class="tag">macOS</span><span class="tag">School email</span><span class="tag">2 Macs</span></div>
+                        <div class="card-value">Renewable while enrolled • No payment or Kilobat account</div>
+                        <div class="card-actions">
+                            <a href="https://kilobat.app/students" target="_blank" class="btn btn-primary">Student Offer →</a>
+                            <button class="btn btn-secondary" onclick="openGuide('kilobat')">Guide</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- GitHub Student Pack -->
                 <div class="card" data-search="github student developer pack pro codespaces domain hosting">
                     <div class="card-main">
@@ -3487,6 +3505,26 @@
 
         // Guide Modal
         const guides = {
+            kilobat: {
+                logo: '📶',
+                title: 'Kilobat Pro for Students',
+                subtitle: 'One year free on two Macs',
+                link: 'https://kilobat.app/students',
+                content: `
+                    <div class="guide-section">
+                        <h3>What You Get</h3>
+                        <p>Eligible students aged 13 or older in a degree-granting course can request one year of Pro for two Macs. If still enrolled, email from a school address to request another year. No payment or Kilobat account is needed.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3>How to Get It</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step"><div class="step-number">1</div><div class="step-content"><h4>Download Kilobat</h4><p>Visit the student offer page and download the Mac app.</p></div></div>
+                            <div class="guide-step"><div class="step-number">2</div><div class="step-content"><h4>Email from your school address</h4><p>Send a short note to the support address linked on the student page to request a student key.</p></div></div>
+                            <div class="guide-step"><div class="step-number">3</div><div class="step-content"><h4>Activate the key</h4><p>When you receive the key, paste it in Kilobat Settings.</p></div></div>
+                        </div>
+                    </div>
+                `
+            },
             copilot: {
                 logo: '🚀',
                 title: 'GitHub Copilot Pro',
